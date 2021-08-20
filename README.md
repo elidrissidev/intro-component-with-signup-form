@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/intro-component-with-signup-form-using-pure-css-and-parcel-bundler-T0hPS4Fq5)
+- [Live Site URL](https://intro-component-with-signup-form-elidrissidev.vercel.app/)
 
 ## My process
 
