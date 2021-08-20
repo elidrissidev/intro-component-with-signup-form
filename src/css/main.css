@@ -1,0 +1,255 @@
+@import '_normalize.css';
+
+:root {
+  /** Colors */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --blue-dark: hsl(249, 10%, 26%);
+  --blue-grayish: hsl(246, 25%, 77%);
+  --gray-light: hsl(0, 0%, 90%);
+  --gray-dark: hsl(0, 0%, 10%);
+
+  /** Typography */
+  --body-font-family: 'Poppins', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--body-font-family);
+}
+
+.root-container {
+  align-items: center;
+  background-image: url(../images/bg-intro-mobile.png);
+  background-color: var(--red);
+  display: flex;
+  flex-direction: column;
+}
+
+.root-container,
+.container {
+  min-height: 100%;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  max-width: 40rem;
+}
+
+.introduction {
+  color: white;
+  margin: 5em 2em 2em;
+  text-align: center;
+}
+
+.introduction__heading {
+  font-size: 1.75rem;
+}
+
+.introduction__paragraph {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.cta {
+  margin: 1em;
+}
+
+.cta__pricing {
+  background-color: var(--blue);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5em 0 rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  padding: 1.2em 6em;
+  text-align: center;
+}
+
+.cta__pricing p {
+  margin: 0;
+}
+
+.cta__form {
+  background-color: white;
+  border-radius: 0.5em;
+  box-shadow: 0 0.5em 0 rgba(0, 0, 0, 0.15);
+  margin-top: 1.5em;
+  padding: 1.3em;
+}
+
+.form__input-wrapper {
+  align-items: center;
+  border: 0.05em solid var(--gray-light);
+  border-radius: 0.25em;
+  display: flex;
+  margin-bottom: 1em;
+  padding: 0.8em 1em;
+  overflow: hidden;
+}
+
+.form__input-wrapper--has-error {
+  border-width: 0.15em;
+  border-color: var(--red);
+  color: var(--red);
+  margin-bottom: 0.5em !important;
+}
+
+.form__input-wrapper--has-error .form__input-error {
+  display: inline-block;
+}
+
+.form__input-wrapper--has-error ~ .form__error {
+  margin-bottom: 1.5em;
+  visibility: visible;
+}
+
+.form__input-wrapper:focus-within {
+  border-color: var(--blue);
+}
+
+.form__input {
+  border: none;
+  color: inherit;
+  flex: 1;
+  font-size: 0.85rem;
+  font-weight: 600;
+  outline: none;
+  width: 100%;
+}
+
+.form__input::placeholder {
+  color: var(--gray-dark);
+}
+
+.form__input-error {
+  display: none;
+  margin-left: 1em;
+}
+
+.form__error {
+  color: var(--red);
+  display: block;
+  font-size: 0.75rem;
+  font-style: italic;
+  text-align: end;
+  visibility: hidden;
+}
+
+.form__btn {
+  background-color: var(--green);
+  border: none;
+  border-radius: 0.25em;
+  box-shadow: inset 0 -0.25em 0 rgba(0, 0, 0, 0.1);
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-weight: 500;
+  padding: 1em;
+  text-transform: uppercase;
+  transition: filter 200ms ease-in;
+  width: 100%;
+}
+
+.form__btn:hover,
+.form__btn:focus {
+  filter: brightness(1.15);
+}
+
+.form__tos {
+  color: var(--blue-grayish);
+  display: block;
+  font-size: 0.7rem;
+  margin: 1em 2.5em 0;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.form__tos a {
+  color: var(--red);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+}
+
+.attribution {
+  color: white;
+  display: block;
+  font-size: 0.7rem;
+  margin: 1em;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--blue);
+}
+
+@media screen and (min-width: 640px) {
+  .root-container {
+    background-image: url(../images/bg-intro-desktop.png);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    align-items: center;
+    flex-direction: row;
+    min-width: 80rem;
+  }
+
+  .introduction {
+    margin: 4em 2em 4em 5em;
+    text-align: start;
+  }
+
+  .introduction__heading {
+    font-size: 3rem;
+  }
+
+  .introduction__paragraph {
+    font-size: 1rem;
+  }
+
+  .cta {
+    margin: 1em 2em;
+  }
+
+  .introduction,
+  .cta {
+    flex: 1;
+  }
+
+  .cta__form {
+    padding: 2.5em;
+  }
+
+  .form__input-wrapper {
+    margin-bottom: 1.25em;
+    padding: 1em 2em;
+  }
+}
+

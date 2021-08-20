@@ -1,0 +1,17 @@
+{
+  "name": "intro-component-with-signup-form",
+  "version": "1.0.0",
+  "private": true,
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "build": "rimraf dist/ && parcel build ./src/index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "parcel": "^2.0.0-rc.0",
+    "rimraf": "^3.0.2"
+  },
+  "author": "Mohamed ELIDRISSI",
+  "license": "MIT"
+}
